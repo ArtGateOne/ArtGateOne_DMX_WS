@@ -51,7 +51,7 @@ void loop() {
 
 void frame_received(uint8_t universe)  // Custom ISR: fired when all channels in one universe are received
 {
-  unsigned DMX_CHANNEL = DMX_ADDRESS;
+  unsigned int DMX_CHANNEL = DMX_ADDRESS;
 
   if (universe == 0) {  // USART0
 
