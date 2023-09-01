@@ -31,7 +31,7 @@ Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 void setup() {
   //DMX_ADDRESS--;
   DMXSerial.init(DMXProbe);
-  DMXSerial.maxChannel(LED_COUNT * 3);
+  DMXSerial.maxChannel((DMX_ADDRESS + LED_COUNT - 1) * 3);
 
   strip.begin();                        // INITIALIZE NeoPixel strip object (REQUIRED)
   strip.show();                         // Turn OFF all pixels ASAP
